@@ -2,12 +2,14 @@ import React from "react";
 import Accodion from "../UI/Accordion/Accordion";
 import styles from "./Questions.module.css";
 
-const Questions = () => {
+const Questions = ({ refOf }) => {
   return (
-    <div className={styles.container}>
-      <h2 className={styles.title}>Курмандык жөнүндөгү суроолор</h2>
-      <div className={styles.accordion}>
-        <Accodion />
+    <div ref={refOf} className={styles.container}>
+      <div className={styles["inner-wrap"]}>
+        <h2 className={styles.title}>Курмандык жөнүндөгү суроолор</h2>
+        <div className={styles.accordion}>
+          <Accodion />
+        </div>
       </div>
     </div>
   );

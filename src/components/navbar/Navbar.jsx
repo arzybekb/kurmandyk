@@ -5,7 +5,7 @@ import { MobileNavbar } from "./mobileNavbar/MobileNavbar";
 // import Button from "../UI/button/Button";
 // import { ModalWindow } from "../UI/modal/Modal";
 
-const Navbar = () => {
+const Navbar = ({ scroll }) => {
   const [scrolled, setScrolled] = useState(false);
   const [nav, setNav] = useState(false);
 
@@ -39,7 +39,7 @@ const Navbar = () => {
       ></ModalWindow> */}
       <div className={styles.div}>
         <header className={scrolled ? `${styles.scrolled}` : ""}>
-          <a href="/">
+          <a onClick={() => scroll("component1")}>
             {/* <Image src={logo} alt="codewise logo" /> */}
             <h1>Logo</h1>
           </a>
@@ -51,13 +51,13 @@ const Navbar = () => {
               }
             >
               <li>
-                <a href="/">Башкы бет</a>
+                <a onClick={() => scroll("component1")}>Башкы бет</a>
               </li>
               <li className={styles.navMenu}>
-                <a href="/">Суроолор</a>
+                <a onClick={() => scroll("component2")}>Суроолор</a>
               </li>
               <li>
-                <a href="/">Хадистер</a>
+                <a onClick={() => scroll("component2")}>Хадистер</a>
               </li>
               <li>
                 <a href="/">Контакттар</a>
