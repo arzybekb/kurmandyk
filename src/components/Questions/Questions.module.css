@@ -1,0 +1,32 @@
+.container {
+  padding: var(--layout-padding);
+  background-image: url("../../assets/images/questions.jpg");
+  background-repeat: no-repeat;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 100px;
+}
+.title {
+  flex-basis: 30%;
+}
+.accordion {
+  flex-basis: 60%;
+}
+@media screen and (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    padding-top: 50px;
+  }
+  .title {
+    flex-basis: 100%;
+    margin-bottom: 20px;
+  }
+  .accordion {
+    flex-basis: 100%;
+    width: 100%;
+  }
+}
