@@ -44,14 +44,12 @@ const Slider = () => {
       <h2>Что даёт профессия аналитика данных?</h2>
 
       <div className="slide">
-        {currentSlide < 5 ? (
-          <ImageSlide
-            className="image"
-            image={slides[currentSlide].image}
-            alt="Изображение слайда"
-            current={currentSlide}
-          />
-        ) : null}
+        <ImageSlide
+          className="image"
+          image={slides[currentSlide].image}
+          alt="Изображение слайда"
+          current={currentSlide}
+        />
 
         <div className="slide-left-section">
           <div>
@@ -87,17 +85,21 @@ const SliderContainer = styled('div')`
   background-size: cover;
   height: 60vh;
   padding: 2rem 0 3rem 4rem;
+  @media (max-width: 768px) {
+    padding: 1rem;
+    text-align: center;
+  }
   .slide {
     display: flex;
     align-items: center;
     padding: 2rem 0 2rem 0;
     transition: opacity 0.5s ease;
+    @media (max-width: 768px) {
+      flex-direction: column;
+      padding: 0;
+    }
   }
 
-  .slide img {
-    max-width: 100%;
-    height: auto;
-  }
   .slide-left-section {
     display: flex;
     flex-direction: column;
@@ -105,6 +107,7 @@ const SliderContainer = styled('div')`
     padding: 0 40px 0 40px;
     height: 35vh;
     font-weight: 600;
+
     h3,
     p {
       transition: 0.3s;
@@ -129,4 +132,10 @@ const ImageSlide = styled('div')`
   background-image: url(${(props) => props.image});
   background-size: cover;
   transition: 0.3s;
+  @media (max-width: 768px) {
+    width: 75vw;
+    max-height: 100px;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
 `;
