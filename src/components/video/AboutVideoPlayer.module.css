@@ -1,0 +1,45 @@
+.title {
+  margin-top: 130px;
+  margin-bottom: 60px;
+}
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin-top: 180px;
+}
+.video {
+  width: 41% !important;
+  height: 87% !important;
+  position: absolute;
+  z-index: 1;
+  margin-bottom: 40px;
+}
+.iphone {
+  display: none;
+}
+@media (max-width: 768px) {
+  .container {
+    width: 100%;
+    padding: 0 16px;
+    margin-top: 380px;
+  }
+  .iphone {
+    margin-top: 40px;
+    width: 100%;
+    display: none;
+  }
+  .comp {
+    display: block;
+    width: 100%;
+  }
+  .video {
+    width: 67% !important;
+    height: 80% !important;
+    margin-top: 25px;
+  }
+}
