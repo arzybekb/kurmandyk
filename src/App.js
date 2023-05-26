@@ -1,6 +1,7 @@
-import Main from "./components/Main/Main";
-import Questions from "./components/Questions/Questions";
-import Navbar from "./components/navbar/Navbar";
+import Main from './components/Main/Main';
+import Questions from './components/Questions/Questions';
+import Navbar from './components/navbar/Navbar';
+import Slider from './components/slide/Slide';
 
 function App() {
   return (
@@ -8,6 +9,7 @@ function App() {
       <Navbar />
       <Main />
       <Questions />
+      <Slider />
     </div>
   );
 }
