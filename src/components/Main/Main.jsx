@@ -2,9 +2,9 @@ import React from "react";
 import styles from "./Main.module.css";
 import Carousel from "../UI/Carousel/Carousel";
 
-const Main = () => {
+const Main = ({ refOf }) => {
   return (
-    <div className={styles.container}>
+    <div ref={refOf} className={styles.container}>
       <Carousel />
     </div>
   );

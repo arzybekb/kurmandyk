@@ -10,3 +10,17 @@
 .description {
   font-size: 2rem;
 }
+@media screen and (max-width: 768px) {
+  .carousel-caption {
+    display: block !important;
+  }
+  .text-wrap {
+    margin-bottom: 4vh;
+  }
+  .title {
+    font-size: 1.5rem;
+  }
+  .description {
+    font-size: 1rem;
+  }
+}

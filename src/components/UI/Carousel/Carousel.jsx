@@ -32,20 +32,20 @@ export default function Carousel() {
   return (
     <MDBCarousel showControls showIndicators>
       {OPTIONS.map((option) => (
-        <MDBCarouselItem
-          className={`w-100 d-block ${styles["carousel-image"]}`}
-          itemId={option.id}
-          key={option.id}
-          src={option.src}
-          alt="..."
-        >
-          <div
-            className={`carousel-caption d-none d-md-block ${styles["text-wrap"]}`}
+        <div key={option.id}>
+          <MDBCarouselItem
+            captionClassName={`${styles["carousel-caption"]}`}
+            className={`w-100 d-block ${styles["carousel-image"]}`}
+            itemId={option.id}
+            src={option.src}
+            alt="..."
           >
-            <h1 className={styles.title}>{option.title}</h1>
-            <p className={styles.description}>{option.description}</p>
-          </div>
-        </MDBCarouselItem>
+            <div className={`${styles["text-wrap"]}`}>
+              <h1 className={styles.title}>{option.title}</h1>
+              <p className={styles.description}>{option.description}</p>
+            </div>
+          </MDBCarouselItem>
+        </div>
       ))}
     </MDBCarousel>
   );
