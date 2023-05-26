@@ -1,8 +1,9 @@
-import { useRef } from 'react';
-import Main from './components/Main/Main';
-import Questions from './components/Questions/Questions';
-import Navbar from './components/navbar/Navbar';
-import Slider from './components/slide/Slide';
+import { useRef } from "react";
+import Main from "./components/Main/Main";
+import Questions from "./components/Questions/Questions";
+import Navbar from "./components/navbar/Navbar";
+import Slider from "./components/slide/Slide";
+import AboutVideoPlayer from "./components/video/AboutVideoPlayer";
 
 function App() {
   const componentRefs = {
@@ -12,7 +13,7 @@ function App() {
   };
 
   const scrollToComponent = (componentName) => {
-    componentRefs[componentName].current.scrollIntoView({ behavior: 'smooth' });
+    componentRefs[componentName].current.scrollIntoView({ behavior: "smooth" });
   };
   return (
     <div>
@@ -20,6 +21,7 @@ function App() {
       <Main refOf={componentRefs.component1} />
       <Questions refOf={componentRefs.component2} />
       <Slider />
+      <AboutVideoPlayer />
     </div>
   );
 }
