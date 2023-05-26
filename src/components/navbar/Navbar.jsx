@@ -51,16 +51,16 @@ const Navbar = () => {
               }
             >
               <li>
-                <a href="/">Main</a>
+                <a href="/">Башкы бет</a>
               </li>
               <li className={styles.navMenu}>
-                <a href="/">Швейные машины</a>
+                <a href="/">Суроолор</a>
               </li>
               <li>
-                <a href="/">О компании</a>
+                <a href="/">Хадистер</a>
               </li>
               <li>
-                <a href="/">Контакты</a>
+                <a href="/">Контакттар</a>
               </li>
             </ul>
           </nav>
