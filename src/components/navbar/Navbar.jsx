@@ -51,18 +51,29 @@ const Navbar = ({ scroll }) => {
               >
                 {t("nav.main")}
               </li>
-              <li className={styles.navMenu}> {t("nav.video")}</li>
               <li
                 onClick={() => scroll("component2")}
+                className={styles.navMenu}
+              >
+                {t("nav.video")}
+              </li>
+              <li
+                onClick={() => scroll("component3")}
                 className={styles.navMenu}
               >
                 {t("nav.questions")}
               </li>
               <li
                 className={styles.navMenu}
-                onClick={() => scroll("component2")}
+                onClick={() => scroll("component4")}
               >
-                {t("nav.hadis")}
+                {t("nav.kurman")}
+              </li>
+              <li
+                className={styles.navMenu}
+                onClick={() => scroll("component5")}
+              >
+                {t("nav.more")}
               </li>
               <li>
                 <span

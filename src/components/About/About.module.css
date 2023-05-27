@@ -1,18 +1,15 @@
 .container {
   padding: var(--layout-padding);
+  background-image: url("../../assets/images/questions.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
   padding-top: 100px;
   padding-bottom: 100px;
 }
-.wrap {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 15px;
+.title {
+  margin-bottom: 20px;
 }
-.video {
-  width: 20rem !important;
-  height: 15rem !important;
-}
-
 @media screen and (max-width: 768px) {
   .container {
     padding-top: 50px;

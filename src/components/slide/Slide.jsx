@@ -1,29 +1,29 @@
 import React, { useState } from "react";
 import { styled, keyframes } from "@mui/material";
 import { zoomIn } from "react-animations";
+import image1 from "../../assets/images/koi.jpg";
+import image2 from "../../assets/images/byk.jpg";
+import image3 from "../../assets/images/koi2.jpeg";
 
-const Slider = () => {
+const Slider = ({ refOf }) => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const slides = [
     {
-      image:
-        "https://agritimes.ru/wp-content/uploads/2022/07/89258.pszmqo.850.jpg",
-      title: "Кой",
-      description:
-        "Всё больше компаний принимают решения на основе данных. Поэтому на ваши навыки всегда будет спрос — опытный аналитик данных зарабатывает до 350 000 ₽.",
+      image: image3,
+      title: "1. Үлүшүңүзү бизге тапшырасыз",
+      description: "Союу, бука тандоо, касап акысы, ушунун ичинде.",
+    },
+    //Ө ө
+    {
+      image: image2,
+      title: "2. Шариат",
+      description: "Шариаттын шаттарына ылайык союп, бөлүп, таратабыз.",
     },
     {
-      image: "https://web-zoopark.ru/wp-content/uploads/2018/06/1-261.jpg",
-      title: "Бука",
+      image: image1,
+      title: "3. Өз үлүшүңүзү",
       description:
-        "Работа с данными не ограничивается одним направлением. Вы можете помогать фармкомпании продвигать новые лекарства, а если надоест — перейти в музыкальный стриминг и прокачивать их сервис рекомендаций. Ещё тут нет рутины — каждый проект интересен и по-своему уникален.",
-    },
-    {
-      image:
-        "https://cs11.livemaster.ru/storage/topicavatar/600x450/bc/d1/18efeebb2019e7271a0f43aae968036fbbc0wc.jpg?h=DoxFg8G2fbrFOdXI_-gkLA",
-      title: "Топоз",
-      description:
-        "Решения дата-аналитика прямо влияют на жизнь компаний и людей. Правильная работа с данными помогает компаниям получать больше прибыли — благодаря этому бизнес может повысить зарплаты сотрудникам или обновить оборудование.",
+        "Өз үлүшүңүзү алып кетесиз жана калгандары муктаждарга бөлүнөт",
     },
   ];
 
@@ -40,7 +40,7 @@ const Slider = () => {
   };
 
   return (
-    <SliderContainer className="slider-container">
+    <SliderContainer ref={refOf} className="slider-container">
       <h2>Биз менен курмандык сойсонор</h2>
 
       <div className="slide">
@@ -84,6 +84,9 @@ const SliderContainer = styled("div")`
   /* background-image: url("https://png.pngtree.com/background/20220723/original/pngtree-ramadan-kareem-islamic-background-banner-with-ramadhan-lantern-mosque-eid-mubarak-picture-image_1720785.jpg"); */
   background-size: cover;
   padding: var(--layout-padding);
+  h2 {
+    margin-bottom: 15px;
+  }
   @media (max-width: 768px) {
     text-align: center;
   }
@@ -104,6 +107,7 @@ const SliderContainer = styled("div")`
     justify-content: space-between;
     padding: 0 40px 0 40px;
     font-weight: 600;
+    margin-top: 10px;
 
     h3,
     p {

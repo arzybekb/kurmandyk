@@ -2,7 +2,7 @@
   filter: brightness(50%);
 }
 .text-wrap {
-  margin-bottom: 30vh;
+  margin-bottom: 4vh;
 }
 .title {
   font-size: 5rem;
@@ -15,7 +15,7 @@
     display: block !important;
   }
   .text-wrap {
-    margin-bottom: 4vh;
+    margin-bottom: 0vh;
   }
   .title {
     font-size: 1.5rem;

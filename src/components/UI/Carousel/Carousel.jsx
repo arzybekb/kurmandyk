@@ -6,29 +6,25 @@ import image1 from "../../../assets/images/slide-1.jpg";
 import image2 from "../../../assets/images/slide-2.jpg";
 import image3 from "../../../assets/images/slide-3.jpg";
 import styles from "./Carousel.module.css";
+import { useTranslation } from "react-i18next";
 
 const OPTIONS = [
   {
     id: 1,
-    title: "Курман айт",
-    description: "бардык мусулмандардын берекелүү майрамы!",
     src: image1,
   },
   {
     id: 2,
-    title: "Курман айт!",
-    description: "Бул жерде текст болот",
     src: image2,
   },
   {
     id: 3,
-    title: "3-чу слайд",
-    description: "Бул жерде текст болот",
     src: image3,
   },
 ];
 
 export default function Carousel() {
+  const { t } = useTranslation();
   return (
     <MDBCarousel showControls showIndicators>
       {OPTIONS.map((option) => (
@@ -41,8 +37,8 @@ export default function Carousel() {
             alt="..."
           >
             <div className={`${styles["text-wrap"]}`}>
-              <h1 className={styles.title}>{option.title}</h1>
-              <p className={styles.description}>{option.description}</p>
+              <h1 className={styles.title}>Курман айт!</h1>
+              <p className={styles.description}>{t("main")}</p>
             </div>
           </MDBCarouselItem>
         </div>
