@@ -1,18 +1,17 @@
 import { useState, useEffect } from "react";
 import styles from "./Navbar.module.css";
 import { MobileNavbar } from "./mobileNavbar/MobileNavbar";
-// import logo from "../../../public/assets/icons/headerLogo.svg";
-// import Button from "../UI/button/Button";
-// import { ModalWindow } from "../UI/modal/Modal";
+import logo from "../../assets/images/logo.png";
+import { useTranslation } from "react-i18next";
 
 const Navbar = ({ scroll }) => {
+  const { t, i18n } = useTranslation();
   const [scrolled, setScrolled] = useState(false);
   const [nav, setNav] = useState(false);
 
-  const [isModal, setIsModal] = useState(false);
-  const onOpenModal = () => setIsModal(true);
-  const onCloseModal = () => setIsModal(false);
-
+  const changeLanguage = (lng) => {
+    i18n.changeLanguage(lng);
+  };
   useEffect(() => {
     const handleScroll = () => {
       const offset = window.scrollY;
@@ -32,35 +31,53 @@ const Navbar = ({ scroll }) => {
 
   return (
     <>
-      {/* <ModalWindow
-        onClose={onCloseModal}
-        open={isModal}
-        className={styles.modal}
-      ></ModalWindow> */}
       <div className={styles.div}>
         <header className={scrolled ? `${styles.scrolled}` : ""}>
-          <a onClick={() => scroll("component1")}>
-            {/* <Image src={logo} alt="codewise logo" /> */}
-            <h1>Logo</h1>
-          </a>
-          <MobileNavbar openHandler={nav} closeHandler={navBarHandler} />
+          <img onClick={() => scroll("component1")} src={logo} alt="logo" />
+          <MobileNavbar
+            openHandler={nav}
+            closeHandler={navBarHandler}
+            scroll={scroll}
+          />
           <nav className={styles.menu}>
             <ul
               className={
                 nav ? [styles.menu, styles.active].join(" ") : [styles.menu]
               }
             >
-              <li>
-                <a onClick={() => scroll("component1")}>Башкы бет</a>
+              <li
+                onClick={() => scroll("component1")}
+                className={styles.navMenu}
+              >
+                {t("nav.main")}
               </li>
-              <li className={styles.navMenu}>
-                <a onClick={() => scroll("component2")}>Суроолор</a>
+              <li className={styles.navMenu}> {t("nav.video")}</li>
+              <li
+                onClick={() => scroll("component2")}
+                className={styles.navMenu}
+              >
+                {t("nav.questions")}
+              </li>
+              <li
+                className={styles.navMenu}
+                onClick={() => scroll("component2")}
+              >
+                {t("nav.hadis")}
               </li>
               <li>
-                <a onClick={() => scroll("component2")}>Хадистер</a>
-              </li>
-              <li>
-                <a href="/">Контакттар</a>
+                <span
+                  style={{ color: i18n.language === "ky" ? "#3b71ca" : "" }}
+                  onClick={() => changeLanguage("ky")}
+                >
+                  КЫР
+                </span>{" "}
+                |{" "}
+                <span
+                  style={{ color: i18n.language === "ru" ? "#3b71ca" : "" }}
+                  onClick={() => changeLanguage("ru")}
+                >
+                  РУ
+                </span>
               </li>
             </ul>
           </nav>
@@ -71,9 +88,6 @@ const Navbar = ({ scroll }) => {
               <span></span>
             </div>
           </div>
-          {/* <Button className={styles.btn} onClick={onOpenModal}>
-            Contacts Us
-          </Button> */}
         </header>
       </div>
     </>

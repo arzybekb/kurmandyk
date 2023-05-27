@@ -1,0 +1,7 @@
+.container {
+  padding: 20px 6%;
+  text-align: center;
+  -webkit-box-shadow: -4px -7px 24px -18px rgba(34, 60, 80, 0.43);
+  -moz-box-shadow: -4px -7px 24px -18px rgba(34, 60, 80, 0.43);
+  box-shadow: -4px -7px 24px -18px rgba(34, 60, 80, 0.43);
+}

@@ -25,7 +25,6 @@
   }
   .inner-wrap {
     flex-direction: column;
-    padding-top: 50px;
   }
   .title {
     flex-basis: 100%;

@@ -3,10 +3,14 @@ import styles from "./MobileNavbar.module.css";
 import "react-responsive-modal/styles.css";
 import { Modal } from "react-responsive-modal";
 import { ModalWindow } from "../../modal/Modal";
+import { useTranslation } from "react-i18next";
 
-export const MobileNavbar = ({ openHandler, closeHandler }) => {
-  const [isSelecte, setIsSelect] = useState(false);
-  const selectHandler = () => setIsSelect((prevState) => !prevState);
+export const MobileNavbar = ({ openHandler, closeHandler, scroll }) => {
+  const { t, i18n } = useTranslation();
+
+  const changeLanguage = (lng) => {
+    i18n.changeLanguage(lng);
+  };
 
   const [isModal, setIsModal] = useState(false);
   const modalHandler = () => {
@@ -19,9 +23,7 @@ export const MobileNavbar = ({ openHandler, closeHandler }) => {
         onClose={modalHandler}
         open={isModal}
         className={styles.modal}
-      >
-        {/* <CloseModalIcon onClick={modalHandler} /> */}
-      </ModalWindow>
+      ></ModalWindow>
       {openHandler && (
         <Modal
           open={openHandler}
@@ -46,19 +48,35 @@ export const MobileNavbar = ({ openHandler, closeHandler }) => {
             </div>
           </div>
           <div className={styles.links}>
-            <a href="/">Logo</a>
             <div className={styles.linkBox}>
               <div className={styles.links_title}>
-                <a href="/">Главная</a>
+                <p onClick={() => scroll("component1")}>Башкы бет</p>
               </div>
               <div className={styles.links_title}>
-                <a href="/">Швейные машины</a>
+                <p onClick={() => scroll("component2")}>Суроолор</p>
               </div>
               <div className={styles.links_title}>
-                <a href="/">О компании</a>
+                <p onClick={() => scroll("component2")}>Хадистер</p>
               </div>
               <div className={styles.links_title}>
-                <a href="/">Контакты</a>
+                <p onClick={() => scroll("component2")}>Контакттар</p>
+              </div>
+              <div className={styles.links_title}>
+                <p>
+                  <span
+                    style={{ color: i18n.language === "ky" ? "#3b71ca" : "" }}
+                    onClick={() => changeLanguage("ky")}
+                  >
+                    КЫР
+                  </span>{" "}
+                  |{" "}
+                  <span
+                    style={{ color: i18n.language === "ru" ? "#3b71ca" : "" }}
+                    onClick={() => changeLanguage("ru")}
+                  >
+                    РУ
+                  </span>
+                </p>
               </div>
             </div>
           </div>
