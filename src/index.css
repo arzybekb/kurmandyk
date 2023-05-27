@@ -15,7 +15,6 @@ body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  --layout-padding: 18px 6%;
   background-color: #f1f7fc;
   box-sizing: border-box;
 }

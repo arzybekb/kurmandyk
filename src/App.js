@@ -2,6 +2,9 @@ import { useRef } from "react";
 import Main from "./components/Main/Main";
 import Questions from "./components/Questions/Questions";
 import Navbar from "./components/navbar/Navbar";
+import Slider from "./components/slide/Slide";
+import AboutVideoPlayer from "./components/video/AboutVideoPlayer";
+import Footer from "./components/Footer/Footer";
 
 function App() {
   const componentRefs = {
@@ -17,7 +20,10 @@ function App() {
     <div>
       <Navbar scroll={scrollToComponent} />
       <Main refOf={componentRefs.component1} />
+      <AboutVideoPlayer />
       <Questions refOf={componentRefs.component2} />
+      <Slider />
+      <Footer />
     </div>
   );
 }
