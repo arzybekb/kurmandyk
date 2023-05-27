@@ -19,6 +19,15 @@ function App() {
   const scrollToComponent = (componentName) => {
     componentRefs[componentName].current.scrollIntoView({ behavior: "smooth" });
   };
+  // "kurmandyk": {
+  //   "title": "Биз менен курмандык сойсонор",
+  //   "text1": "Үлүшүңүзү бизге тапшырасыз",
+  //   "sub1": "Союу, бука тандоо, касап акысы, ушунун ичинде.",
+  //   "text2": "Шариат",
+  //   "sub2": "Шариаттын шаттарына ылайык союп, бөлүп, таратабыз.",
+  //   "text3": "Өз үлүшүңүздү",
+  //   "sub3": "Өз үлүшүңүздү алып кетесиз жана калгандары муктаждарга бөлүнөт."
+  // }
   return (
     <div>
       <Navbar scroll={scrollToComponent} />
