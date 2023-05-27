@@ -19,6 +19,7 @@ function App() {
   const scrollToComponent = (componentName) => {
     componentRefs[componentName].current.scrollIntoView({ behavior: "smooth" });
   };
+
   // "kurmandyk": {
   //   "title": "Биз менен курмандык сойсонор",
   //   "text1": "Үлүшүңүзү бизге тапшырасыз",
