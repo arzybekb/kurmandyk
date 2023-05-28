@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/kurmandyk/static/css/main.1fd3bc4a.css",
-    "main.js": "/kurmandyk/static/js/main.17f3415d.js",
+    "main.js": "/kurmandyk/static/js/main.a25f4059.js",
     "static/js/787.ed31b21d.chunk.js": "/kurmandyk/static/js/787.ed31b21d.chunk.js",
     "static/media/slide-2.jpg": "/kurmandyk/static/media/slide-2.6c04ea7777bf76f25fc2.jpg",
     "static/media/slide-3.jpg": "/kurmandyk/static/media/slide-3.225c0714391e329a610a.jpg",
@@ -9,11 +9,10 @@
     "static/media/fa-solid-900.ttf": "/kurmandyk/static/media/fa-solid-900.4a2cd718d7031b732e76.ttf",
     "static/media/questions.jpg": "/kurmandyk/static/media/questions.40785f9539b70a635621.jpg",
     "static/media/fa-brands-400.ttf": "/kurmandyk/static/media/fa-brands-400.150de8eaa454d669c405.ttf",
-    "static/media/koi.jpg": "/kurmandyk/static/media/koi.af09ee5c33df1c354ca0.jpg",
     "static/media/fa-solid-900.woff2": "/kurmandyk/static/media/fa-solid-900.bb975c966c37455a1bc3.woff2",
+    "static/media/byk.jpg": "/kurmandyk/static/media/byk.fa775db52e9b0f4c1067.jpg",
     "static/media/fa-brands-400.woff2": "/kurmandyk/static/media/fa-brands-400.e033a13ee751afc1860c.woff2",
-    "static/media/koi2.jpeg": "/kurmandyk/static/media/koi2.f82cf768f4c6207b2cb7.jpeg",
-    "static/media/byk.jpg": "/kurmandyk/static/media/byk.80606ecc65df2ea68218.jpg",
+    "static/media/akcha.jpg": "/kurmandyk/static/media/akcha.1d7ae45090f937a2acd0.jpg",
     "static/media/fa-regular-400.ttf": "/kurmandyk/static/media/fa-regular-400.d87474231f4192884802.ttf",
     "static/media/fa-regular-400.woff2": "/kurmandyk/static/media/fa-regular-400.3223dc79c1adee56370b.woff2",
     "static/media/fa-v4compatibility.ttf": "/kurmandyk/static/media/fa-v4compatibility.0e3a648be390bd8cb094.ttf",
@@ -21,11 +20,11 @@
     "index.html": "/kurmandyk/index.html",
     "static/media/getFetch.cjs": "/kurmandyk/static/media/getFetch.40f37ddea2378391108f.cjs",
     "main.1fd3bc4a.css.map": "/kurmandyk/static/css/main.1fd3bc4a.css.map",
-    "main.17f3415d.js.map": "/kurmandyk/static/js/main.17f3415d.js.map",
+    "main.a25f4059.js.map": "/kurmandyk/static/js/main.a25f4059.js.map",
     "787.ed31b21d.chunk.js.map": "/kurmandyk/static/js/787.ed31b21d.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.1fd3bc4a.css",
-    "static/js/main.17f3415d.js"
+    "static/js/main.a25f4059.js"
   ]
 }
