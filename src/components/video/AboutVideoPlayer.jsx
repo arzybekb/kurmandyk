@@ -24,6 +24,10 @@ const AboutVideoPlayer = ({ refOf }) => {
       videoId: "r_Az_VdTt20",
       title: "Нурлан устаз  курбан деген эмне?",
     },
+    {
+      videoId: "kUqi8AaKhYA",
+      title: "Курман айттын дагы бир жөрөлгөсү - курмандык чалуу.",
+    },
   ];
   return (
     <div ref={refOf} className={styles.container}>
