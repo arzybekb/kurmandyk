@@ -21,6 +21,30 @@
     font-size: 1.5rem;
   }
   .description {
+    font-size: 1.2rem;
+  }
+}
+@media screen and (max-width: 450px) {
+  .title {
+    font-size: 1.2rem;
+  }
+  .description {
+    font-size: 0.8rem;
+  }
+}
+@media screen and (max-width: 375px) {
+  .title {
+    font-size: 1.2rem;
+  }
+  .description {
+    font-size: 0.8rem;
+  }
+}
+@media screen and (max-width: 350x) {
+  .title {
     font-size: 1rem;
+  }
+  .description {
+    font-size: 0.6rem;
   }
 }
